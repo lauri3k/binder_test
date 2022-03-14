@@ -1,5 +1,6 @@
 FROM ubuntu:focal
-RUN apt update; apt install python -y
+RUN apt update; apt install python python3-pip -y
+
 RUN pip install --no-cache-dir notebook
 RUN pip install --no-cache-dir jupyterhub
 ARG NB_USER=jovyan
